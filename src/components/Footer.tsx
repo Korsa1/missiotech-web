@@ -68,9 +68,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <address className="not-italic text-sm opacity-80">
-              <p>Email: info@missiotech.com</p>
+              <p>Email: missiotechadm@gmail.com</p>
               <p>Phone: +1 (555) 123-4567</p>
-              <p>Address: 123 Tech Avenue, Innovation District, CA 94103</p>
+              <p>Address: Teheran-ro 70-gil, Gangnam-gu, Seoul, Republic of Korea</p>
             </address>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-white hover:text-[#00B8D4] transition-colors">
