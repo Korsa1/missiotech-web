@@ -69,7 +69,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <address className="not-italic text-sm opacity-80">
               <p>Email: missiotechadm@gmail.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
+              <p>Contact us!</p>
               <p>Address: Teheran-ro 70-gil, Gangnam-gu, Seoul, Republic of Korea</p>
             </address>
             <div className="flex space-x-4 mt-4">
