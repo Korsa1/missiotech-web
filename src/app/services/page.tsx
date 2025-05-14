@@ -1,10 +1,9 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link'; // ✅ 이 줄 추가
+import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-
 
 const ServicesPage = () => {
   return (
@@ -34,27 +33,19 @@ const ServicesPage = () => {
               <h3 className="text-xl font-bold mb-3">Key Features:</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">
-                    ✅
-                  </div>
+                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
                   <p className="text-gray-600">Custom AI solution development tailored to your organization's needs</p>
                 </li>
                 <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">
-                    ✅
-                  </div>
+                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
                   <p className="text-gray-600">Seamless integration with existing systems and workflows</p>
                 </li>
                 <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">
-                    ✅
-                  </div>
+                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
                   <p className="text-gray-600">Advanced data analytics and predictive modeling</p>
                 </li>
                 <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">
-                    ✅
-                  </div>
+                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
                   <p className="text-gray-600">Comprehensive training and ongoing support</p>
                 </li>
               </ul>
@@ -68,7 +59,6 @@ const ServicesPage = () => {
                 "MissioTech's AI integration services have revolutionized our data analysis capabilities. We've seen a 40% increase in efficiency and gained valuable insights that were previously hidden in our data."
               </p>
               <p className="font-bold">- John Doe, CEO, TechInnovate</p>
-              {/* Progress bars remain unchanged */}
             </div>
           </div>
         </div>
@@ -84,7 +74,6 @@ const ServicesPage = () => {
                 "The VR training solutions developed by MissioTech have transformed our employee onboarding process. Training completion rates are up by 85%, and knowledge retention has significantly improved."
               </p>
               <p className="font-bold">- Jane Smith, Training Director, EduFuture</p>
-              {/* Progress bars remain unchanged */}
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-3xl font-bold mb-6">VR/XR Training</h2>
@@ -113,8 +102,8 @@ const ServicesPage = () => {
                   <p className="text-gray-600">Comprehensive analytics and performance tracking</p>
                 </li>
               </ul>
-              <Link href="/metaverseSolution">
-               <button className="btn-primary">Explore VR/XR Solutions</button>
+              <Link href="/metaversesolution">
+                <button className="btn-primary">Explore VR/XR Solutions</button>
               </Link>
             </div>
           </div>
@@ -162,7 +151,6 @@ const ServicesPage = () => {
                 "MissioTech's strategic consulting helped us navigate our digital transformation journey. Their roadmap was clear, actionable, and has positioned us as a leader in our industry."
               </p>
               <p className="font-bold">- Robert Johnson, CTO, GlobalSolutions</p>
-              {/* Progress bars remain unchanged */}
             </div>
           </div>
         </div>
