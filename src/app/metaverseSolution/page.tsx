@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link'; // ✅ 이 줄 추가
 import Head from 'next/head'; // ✅ 이 줄을 꼭 추가
 
-const metaverseSolution = () => {
+const metaversesolution = () => {
   return (
     <>
       <Head>
@@ -126,4 +126,4 @@ export default MetaverseSolution;
   );
 };
 
-export default metaverseSolution;
+export default metaversesolution;
