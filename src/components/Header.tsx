@@ -43,12 +43,12 @@ const Header = () => {
         </div>
       </div>
 
-      {/* 모바일 메뉴 항목 */}
-      {menuOpen && (
-        <nav
-  className={`md:hidden bg-white px-4 overflow-hidden shadow-md transition-all duration-300 ease-in-out ${
-    menuOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
-  }`}
+      {/* 모바일 메뉴 항목 (항상 존재 + transition) */}
+<nav
+  className={`md:hidden bg-white px-4 overflow-hidden shadow-md transform transition-all duration-300 ease-in-out
+    ${menuOpen ? 'max-h-96 opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-y-95'}
+  `}
+  style={{ transformOrigin: 'top' }}
 >
   <ul className="flex flex-col space-y-3 py-4">
     <li><Link href="/" className="block text-[#1A2A33] hover:text-[#0A6E8A]">Home</Link></li>
@@ -59,14 +59,7 @@ const Header = () => {
   </ul>
 </nav>
 
-            <li><Link href="/" className="block text-[#1A2A33] hover:text-[#0A6E8A]">Home</Link></li>
-            <li><Link href="/about" className="block text-[#1A2A33] hover:text-[#0A6E8A]">About</Link></li>
-            <li><Link href="/services" className="block text-[#1A2A33] hover:text-[#0A6E8A]">Services</Link></li>
-            <li><Link href="/dashboard" className="block text-[#1A2A33] hover:text-[#0A6E8A]">Dashboard</Link></li>
-            <li><Link href="/contact" className="block text-[#1A2A33] hover:text-[#0A6E8A]">Contact</Link></li>
-          </ul>
-        </nav>
-      )}
+      
     </header>
   );
 };
