@@ -74,22 +74,22 @@ export default MetaverseSolution;
                 title: 'Mission Field Walkthrough',
                 focus: 'Cultural cues & safety drills',
                 outcome: '70% faster adaptation',
-                video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                video: 'https://www.youtube.com/watch?v=4n-6LFIcTmI&t=17s',
               }, {
                 title: 'Language Partner AR',
                 focus: 'Pronunciation overlay',
                 outcome: '50% error reduction',
-                video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                video: 'https://www.youtube.com/watch?v=4n-6LFIcTmI&t=17s,
               }, {
                 title: 'Virtual Fund-Raiser Hall',
                 focus: 'Interactive donor booths',
                 outcome: 'Avg. gift +23%',
-                video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                video: 'https://www.youtube.com/watch?v=4n-6LFIcTmI&t=17s',
               }, {
                 title: 'Remote Repair Coach',
                 focus: 'AR step-by-step guidance',
                 outcome: 'First-time fix ↑ 35%',
-                video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                video: 'https://www.youtube.com/watch?v=4n-6LFIcTmI&t=17s',
               }].map((s) => (
                 <div key={s.title} className="rounded-lg bg-white shadow overflow-hidden">
                   <div className="aspect-video">
