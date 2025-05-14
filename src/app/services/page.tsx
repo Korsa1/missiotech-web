@@ -102,7 +102,7 @@ const ServicesPage = () => {
                   <p className="text-gray-600">Comprehensive analytics and performance tracking</p>
                 </li>
               </ul>
-              <Link href="/metaversesolution">
+              <Link href="https://missiotech-web.vercel.app/metaverseSolution">
                 <button className="btn-primary">Explore VR/XR Solutions</button>
               </Link>
             </div>
