@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+import Link from 'next/link'; // ✅ 이 줄 추가
+import Head from 'next/head'; // ✅ 이 줄을 꼭 추가
 
-const metaversesolution= () => {
+const MetaverseSolution = () => {
   return (
     <>
       <Head>
@@ -14,6 +14,9 @@ const metaversesolution= () => {
           content="Immersive training and outreach tools using VR/AR for mission organizations. Affordable, measurable, and impactful."
         />
       </Head>
+
+export default MetaverseSolution;
+
       <main className="flex min-h-screen flex-col">
         <header className="bg-white shadow py-4">
           <div className="container mx-auto px-4 text-xl font-bold">MissioTech</div>
