@@ -42,7 +42,7 @@ export default MetaverseSolution;
 
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-center text-3xl font-bold mb-10">Why Mission-Focused VR / AR?</h2>
+            <h2 className="text-center text-3xl font-bold mb-10">Why Task-Focused VR / AR?</h2>
             <div className="overflow-x-auto">
               <table className="mx-auto w-full max-w-5xl table-auto border-collapse text-left text-sm shadow-sm">
                 <thead>
@@ -71,7 +71,7 @@ export default MetaverseSolution;
             <h2 className="text-center text-3xl font-bold mb-10">Solution Showcase</h2>
             <div className="grid gap-10 md:grid-cols-2">
               {[{
-                title: 'Mission Field Walkthrough',
+                title: 'Field Walkthrough',
                 focus: 'Cultural cues & safety drills',
                 outcome: '70% faster adaptation',
                 video: ' ',
