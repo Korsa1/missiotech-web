@@ -90,7 +90,6 @@ const ContactPage = () => {
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">
             Contact us today to schedule a consultation and learn how MissioTech can help your organization achieve its mission through innovative technology solutions.
           </p>
-          <button className="btn-primary">Schedule a Consultation</button>
         </div>
       </section>
 
