@@ -1,7 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Load API key from environment variables (e.g., .env.local or .env)
 const XAI_API_KEY = process.env.XAI_API_KEY;
+const XAI_MODEL = process.env.XAI_MODEL?.trim() || "grok-4.3";
+const MAX_MESSAGES = 20;
+const MAX_MESSAGE_LENGTH = 4_000;
+
+type ChatMessage = {
+  role: "user" | "assistant";
+  content: string;
+};
+
+function isValidMessage(value: unknown): value is ChatMessage {
+  if (!value || typeof value !== "object") return false;
+
+  const message = value as Record<string, unknown>;
+  return (
+    (message.role === "user" || message.role === "assistant") &&
+    typeof message.content === "string" &&
+    message.content.trim().length > 0 &&
+    message.content.length <= MAX_MESSAGE_LENGTH
+  );
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,11 +31,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { messages } = await request.json();
+    const body: unknown = await request.json();
+    const messages =
+      body && typeof body === "object"
+        ? (body as Record<string, unknown>).messages
+        : undefined;
 
-    if (!messages || !Array.isArray(messages)) {
+    if (
+      !Array.isArray(messages) ||
+      messages.length === 0 ||
+      messages.length > MAX_MESSAGES ||
+      !messages.every(isValidMessage)
+    ) {
       return NextResponse.json(
-        { error: "Messages are required and must be an array" },
+        {
+          error:
+            "Provide 1–20 valid user or assistant messages, each no longer than 4,000 characters.",
+        },
         { status: 400 }
       );
     }
@@ -35,7 +66,7 @@ export async function POST(request: NextRequest) {
         "Authorization": `Bearer ${XAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "Grok-4-1-Fast-Reasoning",
+        model: XAI_MODEL,
         messages: [systemMessage, ...messages],
         temperature: 0.7,
         max_tokens: 1500,
@@ -43,17 +74,19 @@ export async function POST(request: NextRequest) {
     });
 
     if (!response.ok) {
-      const errorData = await response.json();
+      const upstreamBody = await response.text();
+      console.error("xAI API error", response.status, upstreamBody);
       return NextResponse.json(
         {
           error: "Failed to get response from xAI API",
-          details: errorData,
         },
         { status: response.status }
       );
     }
 
-    const completion = await response.json();
+    const completion = (await response.json()) as {
+      choices?: Array<{ message?: { content?: string } }>;
+    };
     const assistantMessage = completion.choices?.[0]?.message?.content;
 
     if (!assistantMessage) {
@@ -64,10 +97,10 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json({ message: assistantMessage });
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Server error:", error);
     return NextResponse.json(
-      { error: "Internal server error", details: error },
+      { error: "Internal server error" },
       { status: 500 }
     );
   }

@@ -1,7 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 
-const ServiceCard = ({ title, description, icon, link, index }) => {
+type ServiceCardProps = {
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    link: string;
+    index: number;
+};
+
+const ServiceCard = ({ title, description, icon, link, index }: ServiceCardProps) => {
     return (
         <div
             className="group relative bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
@@ -30,55 +38,55 @@ const ServiceCard = ({ title, description, icon, link, index }) => {
 
 const ServicesV2 = () => {
     return (
-        <section className="relative py-24 bg-[#FAFAFA] overflow-hidden">
+        <section id="work" className="relative py-24 bg-[#FAFAFA] overflow-hidden scroll-mt-20">
             {/* Decorative background blobs */}
             <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#00B8D4]/5 rounded-full blur-3xl -translate-x-1/2"></div>
             <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#003B4F]/5 rounded-full blur-3xl translate-x-1/2"></div>
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-[#00B8D4] font-bold tracking-wider uppercase text-sm">What We Do</span>
-                    <h2 className="text-4xl font-bold mt-2 mb-6 text-[#1A2A33]">Transformative Technology Services</h2>
+                    <span className="text-[#00B8D4] font-bold tracking-wider uppercase text-sm">What We Actually Do</span>
+                    <h2 className="text-4xl font-bold mt-2 mb-6 text-[#1A2A33]">From Mission Questions to Usable Tools</h2>
                     <p className="text-xl text-gray-600">
-                        We provide comprehensive solutions to help you navigate the digital landscape and achieve your mission.
+                        Our work begins with real ministry contexts and develops people, workflows, curricula, and learning environments—not technology for its own sake.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <ServiceCard
                         index={0}
-                        title="AI Integration"
-                        description="Leverage the power of Artificial Intelligence to automate complex processes, predict trends, and optimize operations for maximum efficiency."
+                        title="Missionary AI Training"
+                        description="Hands-on formation for missionaries and ministry teams: prompt design, audience-specific content, custom AI assistants, verification, local AI, security, and repeatable ministry workflows."
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         }
-                        link="/services#ai-integration"
+                        link="/services#missionary-ai-training"
                     />
 
                     <ServiceCard
                         index={1}
-                        title="VR/XR Training"
-                        description="Revolutionize learning with immersive virtual reality experiences that improve retention rates and safety in high-risk training scenarios."
+                        title="Theological Education Tools"
+                        description="AI-assisted courses, multilingual learning resources, church-history learning hubs, student assignments, and assessment workflows designed for seminaries and ministry training."
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                         }
-                        link="/services#vr-xr-training"
+                        link="/services#theological-education"
                     />
 
                     <ServiceCard
                         index={2}
-                        title="Strategic Consulting"
-                        description="Expert guidance to align your technology investments with business goals, ensuring a roadmap for sustainable growth and innovation."
+                        title="AI, XR & Mission Research"
+                        description="Research and prototyping on AI Mission Literacy, AI agents, disciple-making theological education in VR/XR, metaverse ministry, and responsible technology adoption."
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>
                         }
-                        link="/services#consulting"
+                        link="/services#mission-research"
                     />
                 </div>
             </div>

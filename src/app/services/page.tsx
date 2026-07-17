@@ -1,164 +1,78 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import HeaderV2 from '@/components/v2/HeaderV2';
+import FooterV2 from '@/components/v2/FooterV2';
 
-const ServicesPage = () => {
-  return (
-    <main>
-      <Header />
-      <div className="pt-20 pb-12 bg-[#E6F7FA]">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4 text-center">Our Services</h1>
-          <p className="text-gray-600 max-w-3xl mx-auto text-center">
-            Discover how MissioTech can help your organization achieve its mission through innovative technology solutions.
-          </p>
-        </div>
-      </div>
-
-      {/* AI Integration Section */}
-      <section id="ai-integration" className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">AI Integration</h2>
-              <p className="text-gray-600 mb-6">
-                Our AI integration services help organizations harness the power of artificial intelligence to enhance efficiency, automate processes, and gain valuable insights from their data.
-              </p>
-              <p className="text-gray-600 mb-6">
-                We work closely with your team to identify areas where AI can create the most impact, develop custom solutions tailored to your specific needs, and ensure seamless integration with your existing systems.
-              </p>
-              <h3 className="text-xl font-bold mb-3">Key Features:</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Custom AI solution development tailored to your organization's needs</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Seamless integration with existing systems and workflows</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Advanced data analytics and predictive modeling</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Comprehensive training and ongoing support</p>
-                </li>
-              </ul>
-              <a href="https://missiotech-web.vercel.app/contact">
-                <button className="btn-primary">Request a Consultation</button>
-              </a>
-            </div>
-            <div className="bg-[#E6F7FA] p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Success Story</h3>
-              <p className="text-gray-600 mb-4 italic">
-                "MissioTech's AI integration services have revolutionized our data analysis capabilities. We've seen a 40% increase in efficiency and gained valuable insights that were previously hidden in our data."
-              </p>
-              <p className="font-bold">- John Doe, CEO, TechInnovate</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* VR/XR Training Section */}
-      <section id="vr-xr-training" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 bg-[#E6F7FA] p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Success Story</h3>
-              <p className="text-gray-600 mb-4 italic">
-                "The VR training solutions developed by MissioTech have transformed our employee onboarding process. Training completion rates are up by 85%, and knowledge retention has significantly improved."
-              </p>
-              <p className="font-bold">- Jane Smith, Training Director, EduFuture</p>
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl font-bold mb-6">VR/XR Training</h2>
-              <p className="text-gray-600 mb-6">
-                Our VR/XR training solutions create immersive learning experiences that enhance engagement, improve knowledge retention, and accelerate skill development.
-              </p>
-              <p className="text-gray-600 mb-6">
-                We design and develop custom virtual and extended reality training programs that simulate real-world scenarios, allowing your team to practice skills in a safe and controlled environment.
-              </p>
-              <h3 className="text-xl font-bold mb-3">Key Features:</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Custom VR/XR training program development</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Realistic simulation of complex scenarios and environments</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Interactive learning with real-time feedback</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Comprehensive analytics and performance tracking</p>
-                </li>
-              </ul>
-              <Link href="https://missiotech-web.vercel.app/metaverseSolution">
-                <button className="btn-primary">Explore VR/XR Solutions</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Strategic Consulting Section */}
-      <section id="consulting" className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Strategic Consulting</h2>
-              <p className="text-gray-600 mb-6">
-                Our strategic consulting services help organizations navigate the complex digital landscape, develop technology roadmaps, and align their technology initiatives with their core mission and objectives.
-              </p>
-              <p className="text-gray-600 mb-6">
-                We work closely with your leadership team to understand your organization's unique challenges and opportunities, and develop customized strategies that drive meaningful results.
-              </p>
-              <h3 className="text-xl font-bold mb-3">Key Features:</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Comprehensive technology assessment and gap analysis</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Custom technology roadmap development</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Digital transformation strategy and implementation</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="text-[#0A6E8A] mr-3 mt-1">✅</div>
-                  <p className="text-gray-600">Technology vendor selection and management</p>
-                </li>
-              </ul>
-              <a href="https://missiotech-web.vercel.app/contact">
-                <button className="btn-primary">Schedule a Strategy Session</button>
-              </a>
-            </div>
-            <div className="bg-[#E6F7FA] p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Success Story</h3>
-              <p className="text-gray-600 mb-4 italic">
-                "MissioTech's strategic consulting helped us navigate our digital transformation journey. Their roadmap was clear, actionable, and has positioned us as a leader in our industry."
-              </p>
-              <p className="font-bold">- Robert Johnson, CTO, GlobalSolutions</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+type ProgramSectionProps = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  outcomes: string[];
+  examples: string[];
+  reversed?: boolean;
 };
 
-export default ServicesPage;
+function ProgramSection({ id, eyebrow, title, description, outcomes, examples, reversed = false }: ProgramSectionProps) {
+  return (
+    <section id={id} className="py-20 scroll-mt-20 odd:bg-white even:bg-[#F7FBFC]">
+      <div className={`container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${reversed ? 'lg:[&>*:first-child]:order-2' : ''}`}>
+        <div>
+          <p className="text-sm font-bold uppercase tracking-wider text-[#00B8D4] mb-3">{eyebrow}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1A2A33] mb-6">{title}</h2>
+          <p className="text-lg text-gray-600 leading-relaxed mb-8">{description}</p>
+          <h3 className="font-bold text-lg mb-4">What participants build or learn</h3>
+          <ul className="space-y-3">
+            {outcomes.map((outcome) => (
+              <li key={outcome} className="flex items-start gap-3 text-gray-600">
+                <span className="text-[#00B8D4] font-bold" aria-hidden="true">✓</span>
+                <span>{outcome}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <aside className="rounded-3xl bg-[#003B4F] text-white p-8 shadow-xl">
+          <h3 className="text-xl font-bold mb-5">Representative work</h3>
+          <ul className="space-y-4">
+            {examples.map((example) => (
+              <li key={example} className="border-l-2 border-[#00B8D4] pl-4 text-gray-200 leading-relaxed">{example}</li>
+            ))}
+          </ul>
+          <Link href={`/contact?program=${encodeURIComponent(title)}`} className="inline-block mt-8 px-6 py-3 rounded-xl bg-[#00B8D4] text-[#003B4F] font-bold hover:bg-white transition-colors">
+            Discuss this program
+          </Link>
+        </aside>
+      </div>
+    </section>
+  );
+}
+
+export default function ServicesPage() {
+  return (
+    <main className="font-sans antialiased text-[#1A2A33] bg-white">
+      <HeaderV2 />
+      <section className="pt-36 pb-20 bg-[#003B4F] text-white">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <p className="text-sm font-bold uppercase tracking-wider text-[#00B8D4] mb-4">Programs &amp; Collaboration</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Technology shaped by mission practice</h1>
+          <p className="text-xl text-gray-300 leading-relaxed">MissioTech develops people and ministry capacity through contextual training, theological-education tools, and applied research in AI and immersive technology.</p>
+        </div>
+      </section>
+
+      <ProgramSection id="missionary-ai-training" eyebrow="Training" title="Missionary AI Training" description="Practical education for missionaries, pastors, and ministry teams who need more than a list of AI tools. Each program connects a real recurring task with a safe, verifiable, and reusable workflow." outcomes={['Design prompts and custom assistants around a clearly defined ministry purpose.','Adapt sermons, lessons, reports, and Bible-study material for different ages, cultures, and language levels.','Use source-grounded tools such as NotebookLM and establish theological, factual, cultural, and security checks.','Decide when cloud AI, local AI, or human-only work is most appropriate.']} examples={['KPM × MissioTech online AI education for missionaries, including custom AI assistant design.','Audience-specific content workshops converting existing ministry resources into teaching and presentation formats.','Hands-on assignments using GPTs or Gems, NotebookLM, and repeatable “magic prompt” workflows.']} />
+
+      <ProgramSection id="theological-education" eyebrow="Formation" title="AI-Enabled Theological Education" description="We help seminaries and ministry educators turn substantial theological and historical material into structured, multilingual, and interactive learning experiences without surrendering academic or theological responsibility to AI." outcomes={['Develop student-ready lessons, handouts, assignments, and course structures.','Create multilingual learning resources with clear disclosure and human review.','Build submission, instructor-review, and local-LLM assessment workflows.','Connect historical evidence, maps, timelines, and primary-source context to classroom use.']} examples={['A multilingual Philippine Church History Learning Hub with lesson navigation and student submission workflows.','Intensive seminary-course development for Reformed Philippine church history and mission studies.','Practical AI and VR ministry instruction connected with theological institutions in Asia and Africa.']} reversed />
+
+      <ProgramSection id="mission-research" eyebrow="Research & Prototyping" title="AI, XR &amp; Mission Research" description="MissioTech studies emerging technology from the standpoint of mission, discipleship, theological education, and Christian ethics. Research is translated into lectures, curricula, prototypes, and field-testable proposals." outcomes={['Frame opportunities and risks through theological, missiological, pedagogical, and ethical lenses.','Design AI-agent teams for research and ministry workflows with staged verification.','Prototype VR/XR environments for disciple-making and location-free theological formation.','Develop AI Mission Literacy curricula for missionaries, pastors, educators, and mission leaders.']} examples={['“AI, XR & Mission” lectures and mission-forum presentations for church and mission leaders.','Research on disciple-making theological education in VR and immersive ministry environments.','Curriculum design spanning AI theology and ethics, agents, local AI, security, education, and XR ministry.']} />
+
+      <section className="py-20 bg-[#E6F7FA] text-center">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-5">Start with one concrete ministry need</h2>
+          <p className="text-lg text-gray-600 mb-8">We can shape a workshop, research collaboration, curriculum sprint, or small prototype around your people and context.</p>
+          <Link href="/contact" className="btn-primary inline-block">Contact MissioTech</Link>
+        </div>
+      </section>
+      <FooterV2 />
+    </main>
+  );
+}

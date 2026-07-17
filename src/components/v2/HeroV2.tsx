@@ -18,19 +18,18 @@ const HeroV2 = () => {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00B8D4] opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00B8D4]"></span>
                         </span>
-                        Technology with a Mission
+                        Mission, Theology &amp; Emerging Technology
                     </div>
 
                     <h1 className="text-5xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-                        Empowering <br />
+                        Technology for Mission. <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00B8D4] to-[#E6F7FA]">
-                            Future Tech
+                            Formation for the Future.
                         </span>
                     </h1>
 
                     <p className="text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                        MissioTech drives organizational growth through cutting-edge AI integration,
-                        immersive VR/XR training, and strategic consulting services tailored to your needs.
+                        MissioTech equips missionaries, ministry leaders, and theological educators to use AI and XR wisely—combining field experience, Reformed theological reflection, practical training, and collaborative research.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -38,8 +37,8 @@ const HeroV2 = () => {
                             href="/services"
                             className="px-8 py-4 bg-[#00B8D4] text-[#003B4F] font-bold rounded-xl shadow-lg shadow-[#00B8D4]/20 hover:bg-[#E6F7FA] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
                         >
-                            Explore Services
-                            <svg xmlns="http://www.w3.org/2000/svg" w="20" h="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                            Explore Our Work
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                         </Link>
                         <Link
                             href="/contact"
@@ -52,15 +51,15 @@ const HeroV2 = () => {
                     <div className="pt-8 flex items-center gap-8 justify-center lg:justify-start text-gray-400 text-sm font-medium">
                         <div className="flex items-center gap-2">
                             <svg className="w-5 h-5 text-[#00B8D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>AI Integration</span>
+                            <span>AI Mission Literacy</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <svg className="w-5 h-5 text-[#00B8D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>VR Training</span>
+                            <span>XR Theological Education</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <svg className="w-5 h-5 text-[#00B8D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Consulting</span>
+                            <span>Missionary Workflows</span>
                         </div>
                     </div>
                 </div>
@@ -73,7 +72,7 @@ const HeroV2 = () => {
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#003B4F] to-[#0A6E8A] opacity-80 mix-blend-multiply"></div>
                                 <Image
                                     src="/MissioTech Logo.jpeg"
-                                    alt="MissioTech Dashboard"
+                                    alt="MissioTech mission and technology research"
                                     fill
                                     className="object-contain p-20 drop-shadow-2xl"
                                 />
@@ -86,8 +85,8 @@ const HeroV2 = () => {
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                             </div>
                             <div>
-                                <div className="text-sm font-bold text-[#1A2A33]">+40% Efficiency</div>
-                                <div className="text-xs text-gray-500">AI Optimization</div>
+                                <div className="text-sm font-bold text-[#1A2A33]">Field-informed</div>
+                                <div className="text-xs text-gray-500">Mission Research</div>
                             </div>
                         </div>
 
@@ -96,8 +95,8 @@ const HeroV2 = () => {
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                             </div>
                             <div>
-                                <div className="text-sm font-bold text-[#1A2A33]">Smart Solutions</div>
-                                <div className="text-xs text-gray-500">Innovative Tech</div>
+                                <div className="text-sm font-bold text-[#1A2A33]">Theology + Practice</div>
+                                <div className="text-xs text-gray-500">Responsible Innovation</div>
                             </div>
                         </div>
                     </div>

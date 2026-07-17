@@ -11,10 +11,10 @@ const CallToActionV2 = () => {
 
             <div className="container mx-auto px-6 relative z-10 text-center">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                    Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00B8D4] to-[#E6F7FA]">Revolutionize</span> Your Future?
+                    Build the Next Step for Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00B8D4] to-[#E6F7FA]">Mission Context</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    Partner with MissioTech today and unlock the full potential of your organization through our bespoke technology solutions.
+                    Bring us one real ministry challenge. We will help you frame it carefully, choose appropriate technology, and design a practical pilot your people can actually use.
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -22,13 +22,13 @@ const CallToActionV2 = () => {
                         href="/contact"
                         className="px-8 py-4 bg-[#00B8D4] text-[#003B4F] font-bold rounded-xl shadow-lg hover:bg-white hover:scale-105 transition-all duration-300"
                     >
-                        Start Your Journey
+                        Discuss a Project
                     </Link>
                     <Link
                         href="/services"
                         className="px-8 py-4 bg-transparent border-2 border-white/20 text-white font-bold rounded-xl hover:bg-white/10 hover:border-white transition-all duration-300"
                     >
-                        See What We Do
+                        View Programs
                     </Link>
                 </div>
             </div>

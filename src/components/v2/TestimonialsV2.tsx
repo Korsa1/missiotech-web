@@ -1,65 +1,57 @@
 import React from 'react';
 
+const projects = [
+    {
+        category: 'Training',
+        title: 'KPM × MissioTech Missionary AI Education',
+        description: 'Practical online training for missionaries on prompt design, audience-specific content, NotebookLM, custom GPTs and Gems, and reusable AI-assisted ministry workflows.',
+        details: ['Mission-focused exercises', 'Custom assistant design', 'Theological and factual verification'],
+    },
+    {
+        category: 'Theological Education',
+        title: 'AI-Enabled Learning Resources',
+        description: 'Course materials and learning tools for seminaries and ministry leaders, including multilingual Philippine church-history lessons, student submissions, and AI-supported assessment.',
+        details: ['Seminary course development', 'Multilingual learning design', 'Local-LLM assessment experiments'],
+    },
+    {
+        category: 'Research & Prototyping',
+        title: 'AI, XR & Mission',
+        description: 'Research, lectures, and prototypes connecting AI agents, immersive theological education, disciple-making, and metaverse ministry with field realities and Christian ethics.',
+        details: ['Mission forums and workshops', 'VR/XR ministry environments', 'AI Mission Literacy curriculum'],
+    },
+];
+
 const TestimonialsV2 = () => {
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-white overflow-hidden" aria-labelledby="work-in-practice-title">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <span className="text-[#00B8D4] font-bold tracking-wider uppercase text-sm">Success Stories</span>
-                    <h2 className="text-4xl font-bold mt-2 text-[#1A2A33]">Trusted by Industry Leaders</h2>
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <span className="text-[#00B8D4] font-bold tracking-wider uppercase text-sm">Work in Practice</span>
+                    <h2 id="work-in-practice-title" className="text-4xl font-bold mt-2 mb-5 text-[#1A2A33]">Built from Real Ministry Work</h2>
+                    <p className="text-xl text-gray-600">
+                        These are representative areas in which MissioTech has already taught, researched, or developed working resources with mission and theological-education partners.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {[
-                        {
-                            name: "John Doe",
-                            role: "CEO, TechInnovate",
-                            initials: "JD",
-                            quote: "MissioTech's AI integration services have revolutionized our data analysis capabilities. We've seen a 40% increase in efficiency.",
-                            bg: "bg-blue-50"
-                        },
-                        {
-                            name: "Jane Smith",
-                            role: "Director, EduFuture",
-                            initials: "JS",
-                            quote: "The VR training solutions are a game-changer. Employee engagement is at an all-time high, and training time has been cut in half.",
-                            bg: "bg-cyan-50"
-                        },
-                        {
-                            name: "Robert Johnson",
-                            role: "CTO, GlobalSolutions",
-                            initials: "RJ",
-                            quote: "Their strategic consulting gave us the roadmap we needed. We are now confidently navigating the complexities of digital transformation.",
-                            bg: "bg-teal-50"
-                        }
-                    ].map((item, index) => (
-                        <div key={index} className="relative p-8 rounded-3xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
-                            <div className="absolute top-8 right-8 text-[#E6F7FA]">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z" />
-                                </svg>
-                            </div>
-
-                            <div className="mb-6 flex items-center gap-4">
-                                <div className={`w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold text-[#003B4F] ${item.bg}`}>
-                                    {item.initials}
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg text-[#1A2A33]">{item.name}</h4>
-                                    <div className="text-sm text-gray-500">{item.role}</div>
-                                </div>
-                            </div>
-
-                            <p className="text-gray-600 leading-relaxed italic relative z-10">"{item.quote}"</p>
-
-                            <div className="mt-auto pt-6 flex gap-1">
-                                {[1, 2, 3, 4, 5].map((star) => (
-                                    <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                    </svg>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    {projects.map((project) => (
+                        <article key={project.title} className="relative p-8 rounded-3xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+                            <span className="self-start px-3 py-1 rounded-full bg-[#E6F7FA] text-[#0A6E8A] text-xs font-bold uppercase tracking-wide mb-5">
+                                {project.category}
+                            </span>
+                            <h3 className="font-bold text-2xl text-[#1A2A33] mb-4">{project.title}</h3>
+                            <p className="text-gray-600 leading-relaxed mb-6">{project.description}</p>
+                            <ul className="mt-auto space-y-3 border-t border-gray-100 pt-6">
+                                {project.details.map((detail) => (
+                                    <li key={detail} className="flex items-start gap-3 text-sm text-gray-600">
+                                        <svg className="w-5 h-5 text-[#00B8D4] flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>{detail}</span>
+                                    </li>
                                 ))}
-                            </div>
-                        </div>
+                            </ul>
+                        </article>
                     ))}
                 </div>
             </div>

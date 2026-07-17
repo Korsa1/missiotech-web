@@ -1,7 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 
-const ServiceCard = ({ title, description, icon, link }) => {
+type ServiceCardProps = {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  link: string;
+};
+
+const ServiceCard = ({ title, description, icon, link }: ServiceCardProps) => {
   return (
     <div className="card p-6 flex flex-col items-center text-center">
       <div className="text-[#0A6E8A] mb-4 text-4xl">

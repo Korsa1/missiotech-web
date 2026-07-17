@@ -8,10 +8,13 @@ interface Message {
   content: string;
 }
 
+type ApiErrorResponse = { error?: string };
+type ChatResponse = { message?: string };
+
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: 'Hello! I\'m the MissioTech assistant, Molly. How can I help you today?' }
+    { role: 'assistant', content: 'Hello! I\'m Molly, the MissioTech assistant. Ask me about missionary AI training, theological education tools, or AI and XR mission research.' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -51,27 +54,32 @@ const Chatbot = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
+        const errorData = (await response.json()) as ApiErrorResponse;
         console.error('API Error:', errorData);
         throw new Error(
           errorData.error || 'Failed to get response from API'
         );
       }
 
-      const data = await response.json();
+      const data = (await response.json()) as ChatResponse;
+      const assistantMessage = data.message;
+      if (!assistantMessage) {
+        throw new Error('The assistant returned an empty response.');
+      }
 
       // Add assistant response to chat
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: data.message },
+        { role: 'assistant', content: assistantMessage },
       ]);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error:', error);
+      const message = error instanceof Error ? error.message : 'Unknown error';
       setMessages((prev) => [
         ...prev,
         {
           role: 'assistant',
-          content: `I apologize, but I encountered an error. Please try again later. Details: ${error.message}`,
+          content: `I apologize, but I encountered an error. Please try again later. Details: ${message}`,
         },
       ]);
     } finally {
@@ -166,4 +174,3 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
-
